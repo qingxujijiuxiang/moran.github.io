@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随机问候语</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="message"></h1>
+  <script>
+    const messages = ["你好", "别生气", "开心一点"];
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    const messageElement = document.getElementById('message');
+    messageElement.textContent = messages[randomIndex];
+  </script>
+</body>
+
+</html>
